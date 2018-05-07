@@ -1,4 +1,4 @@
-package org.mbmb.server;
+package org.mbmb.reqrep;
 
 import org.zeromq.ZMQ;
 
