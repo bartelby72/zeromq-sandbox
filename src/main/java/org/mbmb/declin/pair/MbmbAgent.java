@@ -44,8 +44,8 @@ public class MbmbAgent implements Runnable {
 					msg.getLast().print("agent");
 					ZFrame recipient = new ZFrame(recvdIdentity);
 					ZFrame echo = new ZFrame(msg.getLast().getData());
-					recipient.send(sendChannel, ZFrame.REUSE + ZFrame.MORE);
-					echo.send(sendChannel, ZFrame.REUSE);
+					recipient.send(agentServer, ZFrame.REUSE + ZFrame.MORE);
+					echo.send(agentServer, ZFrame.REUSE);
 					recipient.destroy();
 					echo.destroy();
 					msg.destroy();
